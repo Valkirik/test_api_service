@@ -10,6 +10,7 @@ packages = [{include = "test_api_service"}]
 python = "^3.10"
 django = "^5.2.6"
 psycopg2-binary = "^2.9.10"
+djangorestframework = "^3.16.1"
 
 
 [build-system]
