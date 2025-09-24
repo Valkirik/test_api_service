@@ -36,7 +36,7 @@ class AnswerCreateAPIview(CreateAPIView):
     permission_classes = [permissions.AllowAny]
     queryset = Answers.objects.all()
 
-    def perform_create(self, serializer):
+    def perform_create(self, serializer: AnswersSerializer) -> None:
         question = get_object_or_404(Questions, pk=self.kwargs["pk"])
         serializer.save(question_id=question)
 
